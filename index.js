@@ -1,4 +1,4 @@
-if (window.performance.navigation.type > 0) {
+function diceRoll() {
     let random1 = Math.floor(Math.random() * 6) + 1;
     let random2 = Math.floor(Math.random() * 6) + 1;
 
@@ -9,10 +9,12 @@ if (window.performance.navigation.type > 0) {
     document.querySelectorAll('img')[1].setAttribute('src', image2);
 
     if (random1 > random2) {
-        document.querySelector('h1').innerHTML = '&#128681 Player 1 Wins!' 
+        document.querySelector('h1').innerHTML = '&#128681 Player 1 Wins!'
     } else if (random1 < random2) {
-        document.querySelector('h1').innerHTML = 'Player 2 Wins! &#128681' 
+        document.querySelector('h1').innerHTML = 'Player 2 Wins! &#128681'
     } else {
-        document.querySelector('h1').innerHTML = 'Draw!' 
+        document.querySelector('h1').innerHTML = 'Draw!'
     }
 }
+let myButton = document.querySelector("button");
+myButton.addEventListener("click", diceRoll);
